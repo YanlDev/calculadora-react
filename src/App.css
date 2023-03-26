@@ -1,0 +1,33 @@
+html,
+body{
+    height: 100%;
+    background-color: #2C3333;
+}
+
+#root{
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contenedor-calculadora{
+  width: 370px;
+  height: 500px;
+  padding: 14px;
+  background-color:#2E4F4F ;
+  border-radius: 20px;
+  border: solid white;
+}
+.fila{
+  display: flex;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
