@@ -3,6 +3,7 @@ import Boton from './componentes/Boton';
 import Pantalla from './componentes/Pantalla';
 import Clear from './componentes/Clear';
 import {useState} from 'react';
+import { evaluate } from 'mathjs';
 
 function App() {
 
@@ -14,6 +15,17 @@ function App() {
   const borrar = (()=>{
     setInput('')
   });
+
+  const calcularResutado = (()=>{
+    if(input){
+      setInput(evaluate(input))
+    }else{
+      alert('Debes ingresar algún número primero')
+    }
+  
+  });
+
+
 
   return (
     <div className='App'>
@@ -40,13 +52,13 @@ function App() {
           <Boton manejarClic = {agregarInput} >*</Boton>
         </div>
         <div className='fila'>
-          <Boton manejarClic = {agregarInput} >=</Boton>
+          <Boton manejarClic = {calcularResutado} >=</Boton>
           <Boton manejarClic = {agregarInput} >0</Boton>
           <Boton manejarClic = {agregarInput} >.</Boton>
           <Boton manejarClic = {agregarInput} >/</Boton>
         </div>
         <div className='fila'>
-          <Clear borrarClic = {()=>borrar}>
+          <Clear borrarClic = {borrar}>
             Clear
           </Clear>
         </div>

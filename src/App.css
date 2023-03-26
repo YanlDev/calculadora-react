@@ -31,3 +31,10 @@ body{
   align-items: center;
 }
 
+@media (max-width:765px) {
+  .contenedor-calculadora{
+    width: 95%;
+    min-width: 270px;
+    padding: 14px;
+  }
+}

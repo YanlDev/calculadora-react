@@ -4,7 +4,7 @@ import '../style-sheets/Clear.css';
 function Clear ({ children, borrarClic}) {
   return (
     <div className="boton-clear"
-      onClick={ borrarClic()}
+      onClick={ ()=> borrarClic()}
     >
       {children}
     </div>
