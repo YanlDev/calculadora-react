@@ -9,7 +9,9 @@ function Boton (params) {
 
   return(
     <div
-    className={`boton-contenedor ${esOperador(params.children) ? 'operador' : ''}`.trimEnd()}>
+    className={`boton-contenedor ${esOperador(params.children) ? 'operador' : ''}`.trimEnd()}
+    onClick = {()=> params.manejarClic(params.children)}
+    >
 
       {params.children}
     
